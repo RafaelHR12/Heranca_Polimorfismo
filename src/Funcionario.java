@@ -1,22 +1,38 @@
 
 abstract class Funcionario {
 
-	 // Atributos comuns a todos os funcionários
-    String nome;
-    double salario;
+	// Atributos comuns a todos os funcionários
+	private String nome;
+	private double salario;
 
-    // Construtor
-    Funcionario(String nome, double salario) {
-        this.nome = nome;
-        this.salario = salario;
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    // Método para exibir informações sobre o funcionário
-    void exibirInformacoes() {
-        System.out.println("Nome: " + nome);
-        System.out.println("Salário: " + salario);
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    // Método abstrato para calcular salário
-    abstract double calcularSalario();
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+
+	// Construtor
+	Funcionario(String nome, double salario) {
+		this.nome = nome;
+		this.salario = salario;
+	}
+
+	// Método para exibir informações sobre o funcionário
+	void exibirInformacoes() {
+		System.out.println("Nome: " + nome);
+		System.out.println("Salário: " + salario);
+	}
+
+	// Método abstrato para calcular salário
+	abstract double calcularSalario();
 }
